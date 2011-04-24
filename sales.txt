@@ -1,0 +1,18 @@
+<h2>Sales</h2>
+		<?php if(is_array($sales_pages)): ?>
+		<ul>
+			<?php foreach($sales_pages as $sale): ?>
+			
+				<li>
+				 	<h4><?=$sale->name?></h4>
+					<p><?php print_r($sale); ?></p>
+				</li>
+				
+			<?php endforeach; ?>
+		</ul>
+		
+		<?php else: ?>
+		
+			<p>You hae no sales.</p>
+			
+		<?php endif; ?>

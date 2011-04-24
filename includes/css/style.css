@@ -1,0 +1,162 @@
+/*Reset */
+html, body, h1, h2, h3, h4, h5, h6, form, input, ul, ol, p, fieldset { padding: 0; margin: 0; }
+
+/* Main CSS */
+#wrapper{
+	width:990px;
+	height:auto;
+	margin: 0 auto;
+}
+#header{
+	background-color:pink;
+	background:url('../images/header.png');
+	width:990px;
+	height:220px;
+}
+
+/*Menu */
+nav{
+	float:left;
+	width:190px;
+	margin:0 0 0 0;
+}
+
+nav ul{
+	float:left;
+	margin:0;
+	list-style:none;
+	font-size:14px;
+	width:190px;
+}
+
+nav li a{
+	font-size:14px;
+	color:#fff;
+	line-height:25px; /*Text Hight On Button */
+	text-decoration:none;
+	text-indent:25px;
+	display:block;
+	width:190px;
+	height:27px;
+	background-image:url('../images/normal.png');
+}
+
+nav a:hover{
+	background-image:url('../images/onclick.png');
+}
+
+/*Content */
+
+#content{
+	margin: 0 0 0 190px;
+	background:url('../images/mainbg.png') no-repeat;
+	width:800px;
+	height:555px;
+}
+
+#content h1{
+	margin: 5px 0 0 10px;
+	font-family: 'Josefin Slab', arial, serif;
+	font-size:24px;
+}
+
+#content p{
+	margin:0 0 0 15px;
+}
+
+footer{
+	clear:both;
+	background:url('../images/footer.png') no-repeat #000;
+	width:990px;
+	height:20px;
+}
+
+/* Misc*/
+
+#metal{
+	float:left;
+	margin:160px 0 0 -190px;
+	background:url('../images/metalnavbg.png');
+	height:400px;
+	width:190px;
+}
+
+/* Text Formatting */
+
+#companyName{
+	text-align:center;
+	padding-top:45px;
+	font-size:35px;
+	color:#f0f0ef;
+}
+
+#companyQuote{
+	text-align:center;
+	font-size:18px;
+	color:#a5a4a2;
+}
+
+/*Forms */
+
+/*General*/
+
+#validation{
+	font-weight:bold;
+	color:#ff0101;
+}
+fieldset{
+	border:none;
+}
+label{
+	display:block;
+}
+
+/*Admin Login */
+#loginForm{
+	margin: 0 auto 10px;
+	width:150px;
+	height:150px;
+	background-color:#c5c4c3;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+}
+#loginForm label{
+	font-weight:bold;
+	margin:5px 0 0 15px;
+	display:block;
+}
+#loginForm input{
+	margin:10px 0 0 15px;
+	height:15px;
+}
+#loginForm input[type=submit]{
+	margin-top:5px;
+	display:block;
+}
+
+#sales{
+	width:150px;
+	height:180px;
+	margin-left:15px;
+	border: 1px solid red;
+}
+
+#sales .thumbnail{
+	height:150px;
+	width:150px;
+}
+
+#sales .location{
+	float:left;
+	text-align:center;
+	font-weight:bold;
+	margin-left:8px;
+}
+
+#sales .price{
+	float:left;
+	text-align:left;
+	font-weight:bold;
+	padding-left:5px;
+	color:#ff0101;
+}
