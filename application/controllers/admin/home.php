@@ -19,7 +19,7 @@ class Home extends CI_Controller {
         if($this->session->userdata('logged_in')) redirect('admin/dashboard');
 		// set data
 		$data['title'] = 'Login';
-		$data['sales_pages'] = NULL
+		$data['sales_pages'] = NULL;
 		$data['get_images'] = NULL;
 		$data['cms_pages'] = $this->navigation_model->getCMSPages();
 
