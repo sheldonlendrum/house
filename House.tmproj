@@ -5,6 +5,8 @@
 	<key>documents</key>
 	<array>
 		<dict>
+			<key>expanded</key>
+			<true/>
 			<key>name</key>
 			<string>House</string>
 			<key>regexFolderFilter</key>
@@ -20,8 +22,8 @@
 	<key>metaData</key>
 	<dict/>
 	<key>showFileHierarchyDrawer</key>
-	<true/>
+	<false/>
 	<key>windowFrame</key>
-	<string>{{203, 62}, {1067, 716}}</string>
+	<string>{{358, 312}, {1067, 716}}</string>
 </dict>
 </plist>

@@ -40,10 +40,10 @@ class Addimage extends CI_Controller {
     $this->load->library('upload', $config); 
     if(!$this->upload->do_upload()) {
 	
-	$error = array('imageError' => $this->upload->display_errors());
+	$success = array('imageError' => $this->upload->display_errors());
     }
     else{
-	$imgdata = array('upload_data' => $this->upload->data());
+	$data = array('upload_data' => $this->upload->data());
 	$data['success'] = TRUE;
 	$config['image_library'] = 'GD2';
 	$config['source_image'] = $this->upload->upload_path.$this->upload->file_name;
