@@ -25,6 +25,15 @@ class Navigation_model extends CI_Model {
 		if($query->num_rows() == 1) return $query->row();
 		
 	}
+
+	function getCMSPageByPermalink($permalink) {
+		
+		if(!$permalink) $permalink = 'home'; //Default Page
+		$this->db->where('permalink', $permalink);
+		$query = $this->db->get('pages', 1);
+		if($query->num_rows() == 1) return $query->row();
+		
+	}
 	
 }
 

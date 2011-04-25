@@ -18,8 +18,8 @@ class Image_model extends CI_Model
 	return $rows;
 	}
 
-	function addImage($data) {
-		$this->db->insert('images',$data);
+	function addImage($imgdata) {
+		$this->db->insert('images',$imgdata);
 		return;
 	}
 

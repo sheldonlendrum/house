@@ -13,7 +13,7 @@ class Sales_model extends CI_Model
 		$query = $this->db->get('sales');
 		if($query->num_rows() > 0) return $query->result();
 	
-	}
+	} # End getSalesPages
 	
 	function getSalesContent($id = NULL) {
 		$this->db->where('id', $id);
@@ -24,19 +24,27 @@ class Sales_model extends CI_Model
 			return $row;
 		}else{
 			return FALSE;
-		}
-	}
+		} # End IF
+	} # End getSalesContent
 
 		
 	function addSale($data = NULL) {
+		$this->db->insert('sales', $data);
+		return TRUE;
+	} # End Add Sale	
 	
-	$this->db->insert('sales', $data);
-	return TRUE;
-	}	
-	
-	function updateSale($id, $data) {
-		
+	function updateSale($id, $content) {
 		$this ->db->where('id', $id);
-		$this->db->update('sales', $data);
-	}
-}
+		$update -> $this->db->get('sales');
+		$row = $update->row_array();
+		
+		if($update->num_rows() > 0) {
+			#lets delete the image
+			unlink("/includes/uploads/gallery/".$update['imagename']);
+			#lets delete the thumb.
+			unlink("/includes/uploads/gallery/thumbs/".$update['thumbname']);
+			
+			$this->db->update('sales', $content);
+		} # End IF
+	} # End Update
+} # End Model

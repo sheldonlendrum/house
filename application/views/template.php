@@ -19,7 +19,7 @@ echo doctype('html5');
 		<?php if(is_array($cms_pages)): ?>
 				<ul>
 					<?php foreach($cms_pages as $page): ?>
-					<li><a href="<?=base_url() . $page->permalink?>"><?=$page->name?></a></li>
+					<li><a href="<?=base_url() . 'page/' . $page->permalink?>"><?=$page->name?></a></li>
 					<?php endforeach; ?>
 				</ul>
 			<?php endif; ?>

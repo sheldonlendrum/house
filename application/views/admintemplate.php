@@ -1,4 +1,5 @@
 <?php
+//echo $message;
 
 $stylesheetCSS = array('href' => 'includes/css/adminstyle.css', 'rel' => 'stylesheet', 'type' => 'text/css', 'media' => 'screen');
 

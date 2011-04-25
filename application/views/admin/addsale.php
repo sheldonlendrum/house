@@ -1,14 +1,19 @@
 <?php
 //Setting form attributes
 $formAddSale = array('id' => 'addSale', 'name' => 'addSale');
-$saleName = array('id' => 'name', 'name' => 'name', 'placeholder' => 'Name*');
-$saleLocation = array('id' => 'location', 'name' => 'location', 'placeholder' => 'Location*');
-$saleBedrooms = array('id' => 'bedrooms','name' => 'bedrooms', 'placeholder' => 'Number of Bedrooms*');
-$saleBathrooms = array('id' => 'bathrooms','name' => 'bathrooms', 'placeholder' => 'Number of Bathrooms*');
-$saleCondition = array('id' => 'condition','name' => 'condition', 'placeholder' => 'Condition*');
+$saleName = array('id' => 'name', 'name' => 'name', 'placeholder' => 'Name*', 'value' => set_value('name'));
+$saleLocation = array('id' => 'location', 'name' => 'location', 'placeholder' => 'Location*', 'value' => set_value('location'));
+$saleBedrooms = array('id' => 'bedrooms','name' => 'bedrooms', 'placeholder' => 'Number of Bedrooms*', 'value' => set_value('bedrooms'));
+$saleBathrooms = array('id' => 'bathrooms','name' => 'bathrooms', 'placeholder' => 'Number of Bathrooms*', 'value' => set_value('bathrooms'));
+$saleCondition = array('id' => 'condition','name' => 'condition', 'placeholder' => 'Condition*', 'value' => set_value('condition'));
 $saleImage = array('id' => 'userfile', 'name'=> 'userfile', 'placeholder' => 'File Location*');
-$saleDescription = array('id' => 'description','name' => 'description', 'placeholder' => 'Sale Description*');
-$salePrice = array('id' => 'price','name' => 'price', 'placeholder' => 'Price*');
+$salePrice = array('id' => 'price','name' => 'price', 'placeholder' => 'Price*', 'value' => set_value('price'));
+$saleDescription = array('id' => 'description','name' => 'description', 'placeholder' => 'Sale Description*', 'value' => set_value('description'));
+
+if($success == TRUE) {
+echo '<section id = "validation">Sale Added</section>';	
+}
+echo '<section id = "validation">'.$message['imageError'].'</section>';
 ?>
 
 <section id = "validation"><?php echo validation_errors();?></section>

@@ -39,3 +39,5 @@
 */
 
 $route['default_controller'] = "home";
+$route['page/:any'] = 'page';
+//$route['admin/:any'] = 'admin';

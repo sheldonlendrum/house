@@ -13,21 +13,19 @@ class Addimage extends CI_Controller {
     parent::__construct(); 
     } 
     function index() { 
-    	if(!$this->session->userdata('logged_in')) { 
-        	redirect('admin/home'); 
-    	} 
+    	if(!$this->session->userdata('logged_in')) redirect('admin/home');
+  
     // Main Page Data 
     $data['cms_pages'] = $this->navigation_model->getCMSPages(); 
     $data['title'] = 'Add Gallery Image'; 
-    $data['content'] = $this->load->view('admin/addimage',NULL,TRUE); 
+    
 
 
     //Set Validation 
-    //$this->form_validation->set_rules('userfile', 'userfile', 'trim|required'); 
+    $this->form_validation->set_rules('userfile', 'userfile', 'trim'); 
     $this->form_validation->set_rules('description', 'Description', 'trim|required'); 
 
-    if($this->form_validation->run() === TRUE) { 
-
+    if($this->form_validation->run()) { 
     //Set File Settings 
     $config['upload_path'] = 'includes/uploads/gallery/'; 
     $config['allowed_types'] = 'jpg|png'; 
@@ -40,10 +38,11 @@ class Addimage extends CI_Controller {
     $this->load->library('upload', $config); 
     if(!$this->upload->do_upload()) {
 	
-	$success = array('imageError' => $this->upload->display_errors());
+	$data['message'] = array('imageError' => $this->upload->display_errors(),'imageError2' => 'Error!');
+	
     }
     else{
-	$data = array('upload_data' => $this->upload->data());
+	$data['upload_data'] = $this->upload->data(); // Array of image data
 	$data['success'] = TRUE;
 	$config['image_library'] = 'GD2';
 	$config['source_image'] = $this->upload->upload_path.$this->upload->file_name;
@@ -60,15 +59,17 @@ class Addimage extends CI_Controller {
     
     $file_info = $this->upload->data();
     
-    $data = array(   
+// IMG Data array for db insert
+    $imgdata = array(   
         'description' => $this->input->post('description', TRUE), 
         'imagename' => $file_info['file_name'],
 	'thumbname' =>$file_info['raw_name'].'_thumb'.$file_info['file_ext'] 
         ); 
-    $this->image_model->addImage($data);
-    $this->load->view('admintemplate', $data); 
+    $this->image_model->addImage($imgdata);
     
-    } 
- } 
+} // end form validation
+$data['content'] = $this->load->view('admin/addimage',$data,TRUE); 
+$this->load->view('admintemplate', $data); 
 
+ }
 }

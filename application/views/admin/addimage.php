@@ -2,17 +2,19 @@
 //Setting form attributes
 $formAddImage = array('id' => 'addImage', 'name' => 'addImage');
 $imageImage = array('id' => 'userfile', 'name' => 'userfile', 'placeholder' => 'File Location*');
-$imageDescription = array('id' => 'description','name' => 'description','placeholder' => 'Image Description*');
+$imageDescription = array('id' => 'description','name' => 'description', 'placeholder' => set_value('description'));
 
 if($success == TRUE) {
-echo '<section id = "validation">Page Updated</section>';	
+echo '<section id = "validation">Image Uploaded</section>';	
 }
 
 
+
+echo $message['imageError'];
 ?>
 
-
-<section id = "validation"><?php echo validation_errors();?></section>
+<?php echo validation_errors(); ?>
+<section id = "validation"></section>
 
 
 <?php

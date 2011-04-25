@@ -17,9 +17,10 @@ class Home extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
-	public function index($page)
+	public function index()
 	{
-		$page = $this->navigation_model->getCMSPage($id);
+		redirect('page/home');
+		/*$page = $this->navigation_model->getCMSPage($id);
 		if(!$page) die(' wrong permalink in DB'); //show_404();
 		$data['cms_pages'] = $this->navigation_model->getCMSPages();
 		$data['title'] = $page->name;
@@ -29,6 +30,7 @@ class Home extends CI_Controller {
 		$data['content'] = $this->load->view('templates/'. $page->template, $page, TRUE);
 		
 		$this->load->view('template',$data);
+		*/
 	}
 }
 
