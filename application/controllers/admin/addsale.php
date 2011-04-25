@@ -18,12 +18,15 @@ class Addsale extends CI_Controller
 	{ 
     	if(!$this->session->userdata('logged_in'))redirect('admin/home');
 
-
+			# Main Data
+			
+			$data['title'] = 'Add Sale: ';
+			
 			//Set Validation
 			$this->form_validation->set_rules('userfile','userfile', 'trim|xss_clean');
 		    $this->form_validation->set_rules('name', 'Name', 'trim|required|xss_clean'); 
 		    $this->form_validation->set_rules('location', 'Location', 'trim|required|xss_clean'); 
-		    $this->form_validation->set_rules('bedrooms', 'Bedrooms', 'trim|numeric|required'); 
+		    $this->form_validation->set_rules('bedrooms', 'Bedrooms', 'trim|numeric|required|xss_clean'); 
 		    $this->form_validation->set_rules('bathrooms', 'Bathrooms', 'trim|numeric|required|xss_clean'); 
 		    $this->form_validation->set_rules('condition', 'Condition', 'trim|required|xss_clean'); 
 		    $this->form_validation->set_rules('description', 'Description', 'trim|required|xss_clean'); 

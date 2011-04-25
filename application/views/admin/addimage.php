@@ -9,12 +9,10 @@ echo '<section id = "validation">Image Uploaded</section>';
 }
 
 
-
-echo $message['imageError'];
+echo '<section id = "validation">'.$message['imageError'].'</section>';
 ?>
 
-<?php echo validation_errors(); ?>
-<section id = "validation"></section>
+<section id = "validation"><?php echo validation_errors(); ?></section>
 
 
 <?php

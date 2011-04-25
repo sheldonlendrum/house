@@ -118,6 +118,19 @@ nav a:hover{
 }
  
 /*Forms */
+
+#leftFormCol{
+	float:left;
+	width:100px;
+	border:1px solid gray;
+}
+
+#rightFormCol{
+	float:left;
+	width:150px;
+	margin:0 0 0 75px;
+	border: 1px solid blue;
+}
  
 /*General*/
  
@@ -127,19 +140,27 @@ nav a:hover{
 }
 
 form{
-    width:300px;
+    width:100%;
     float:left;
     margin: 0 0 0 25px;
+	border: 1px solid black;
 }
 
 fieldset{
     border:none;
 }
 
+label{
+	width:30px;
+	margin: 0 42px 3px 5px;
+	border: 1px solid green;
+}
+
 input{
     width:130px;
     height:20px;
-    margin: 0 15px 3px 0;
+    margin: 0 42px 3px 5px;
+	border: 1px solid red;
 }
 
 ::-webkit-input-placeholder{
