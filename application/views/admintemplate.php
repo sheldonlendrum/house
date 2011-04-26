@@ -36,10 +36,10 @@ echo doctype('html5');
 				<li><?php echo anchor('admin/deleteimage','Delete Image');?></li>
 			</ul>
 			</li>
-			<li><?php echo anchor('#','Sales');?>
+			<li><?php echo anchor('','Sales');?>
 			<ul>
 				<li><?php echo anchor('admin/addsale','Add Sale');?></li>
-				<li><?php echo anchor('#','Edit Sale');?>
+				<li><?php echo anchor('','Edit Sale');?>
 		                	<?php if(is_array($sales_pages)): ?>
 									<ul>
 										<?php foreach($sales_pages as $sale): ?>
@@ -58,12 +58,10 @@ echo doctype('html5');
 			<?php endif; ?>
     </nav>
 </div><!-- Left Col End -->
-	<div id="rightCol">
-     <section id="content">
+     <div id="content">
      <h1><?= $title ?></h1>
-    <p> <?= $content // loads template file ?> <p>
-   </div><!-- Right Col End -->     
-    </section>
+    <p> <?= $content // loads template file ?> </p>
+   </div><!-- Content End -->     
     
     <div id="footer">&copy; Houses LTD <?php echo date('Y');?></div>
 	</div> <!-- Wrapper Close -->

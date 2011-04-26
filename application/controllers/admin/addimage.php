@@ -38,7 +38,7 @@ class Addimage extends CI_Controller {
     $this->load->library('upload', $config); 
     if(!$this->upload->do_upload()) {
 	
-	$data['message'] = array('imageError' => $this->upload->display_errors(),'imageError2' => 'Error!');
+	$data['message'] = array('imageError' => $this->upload->display_errors());
 	
     }
     else{

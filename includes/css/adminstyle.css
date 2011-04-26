@@ -3,26 +3,22 @@ html, body, h1, h2, h3, h4, h5, h6, form, input, ul, ol, p, fieldset { padding: 
  
 /* Main CSS */
 #wrapper{
-    width:990px;
+    width:960px;
     height:auto;
     margin: 0 auto;
 }
 #header{
     background-image:url('../images/header.png');
     background-color:#000;
-    width:990px;
     height:220px;
 }
 
 #leftCol{
+	float:left;
     width:190px;
-    float:left;
+	border:1px solid red;
 }
 
-#rightCol{
-    width:990px;
-    margin:0 0 0 0px;
-}
 /*Menu */
 nav{
     float:left;
@@ -88,7 +84,7 @@ nav a:hover{
 #footer{
     clear:both;
     background:url('../images/footer.png') no-repeat #000;
-    width:990px;
+    width:100%;
     height:60px;
 }
  
@@ -98,7 +94,7 @@ nav a:hover{
     float:left;
     margin:160px 0 0 -190px;
     background-image:url('../images/metalnavbg.png');
-    height:400px;
+    height:auto;
     width:190px;
 }
  
@@ -118,20 +114,6 @@ nav a:hover{
 }
  
 /*Forms */
-
-#leftFormCol{
-	float:left;
-	width:100px;
-	border:1px solid gray;
-}
-
-#rightFormCol{
-	float:left;
-	width:150px;
-	margin:0 0 0 75px;
-	border: 1px solid blue;
-}
- 
 /*General*/
  
 #validation{
@@ -139,35 +121,80 @@ nav a:hover{
     color:#ff0101;
 }
 
-form{
-    width:100%;
-    float:left;
-    margin: 0 0 0 25px;
-	border: 1px solid black;
+.form{
+    width: 400px;
+    height:100%;
+    padding: 15px 25px;
+    margin: 0 auto 10px;
+    color: #000;
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+    overflow: hidden;
+
 }
 
-fieldset{
-    border:none;
+.form fieldset{
+	border:none;
 }
 
-label{
-	width:30px;
-	margin: 0 42px 3px 5px;
-	border: 1px solid green;
+#formLayout{
+	border:2px solid #000;
 }
 
-input{
-    width:130px;
-    height:20px;
-    margin: 0 42px 3px 5px;
-	border: 1px solid red;
+#formLayout label{
+   clear:  both;
+    display: block;
+}
+
+#formLayout input{
+    font-size:12px;
+    border: 2px solid #999;
+    padding: 6px 8px;
+    background-color: #fff;
+    -moz-border-radius:10px;
+    -webkit-border-radius:10px;
+    -webkit-box-shadow: inset 0px 2px 2px rgba(0,0,0,0.2);
+    -moz-box-shadow: inset 0px 2px 2px rgba(0,0,0,0.2);
+    color: #000;
+    width: 250px;
+}
+
+
+
+#formLayout .small{
+	color:red;
+	display:block;
+	font-size:11px;
+	font-weight:bold;
+	text-align:left;
+	width:140px;
 }
 
 ::-webkit-input-placeholder{
     text-indent:5px;
     color:red;
 }
- 
+
+#formLayout textarea{
+	width:250px;
+}
+/* Page Edit Form */
+
+#pageEdit .form, #formLayout{
+    width: 490px;
+    height:100%;
+    padding: 15px 55px;
+    margin: 0 auto 10px;
+    color: #000;
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+    overflow: hidden;
+
+}
+
+#pageEdit textarea{
+	width:480px;
+}
 /*Admin Login */
 #loginForm{
     margin: 0 auto 10px;

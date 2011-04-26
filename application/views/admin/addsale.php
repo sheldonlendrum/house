@@ -18,26 +18,26 @@ echo '<section id = "validation">'.$message['imageError'].'</section>';
 
 <section id = "validation"><?php echo validation_errors();?></section>
 
-
-
+<div id ="formLayout" class="form">
 <?php echo form_open_multipart('admin/addsale/', $formAddSale); ?>
 <?php echo form_fieldset(); ?>
-<div id="leftFormCol"><?php echo form_label('Name*:','name'); ?> </div>
-<div id ="rightFormCol"><?php echo form_input($saleName); ?> </div>
-<div id ="leftFormCol"><?php echo form_label('Location*:','location');?> </div>
-<div id ="rightFormCol"><?php echo form_input($saleLocation);?> </div>
-<div id ="leftFormCol"><?php echo form_label('Bedrooms*: ','bedrooms');?> </div>
-<div id ="rightFormCol"><?php echo form_input($saleBedrooms);?> </div>
-<div id ="leftFormCol"><?php echo form_label('Bathrooms*: ','bathrooms');?> </div>
-<div id ="rightFormCol"><?php echo form_input($saleBathrooms);?> </div>
-<div id ="leftFormCol"><?php echo form_label('Condition*: ','condition');?> </div>
-<div id ="rightFormCol"><?php echo form_input($saleCondition);?> </div>
-<div id ="leftFormCol"><?php echo form_label('Price*: ','price');?> </div>
-<div id ="rightFormCol"><?php echo form_input($salePrice);?> </div>
-<div id ="leftFormCol"><?php echo form_label('Image*: ','userfile');?> </div>
-<div id ="rightFormCol"><?php echo form_upload($saleImage);?> </div>
-<div id ="leftFormCol"><?php echo form_label('Description*: ','description');?> </div>
-<div id ="rightFormCol"><?php echo form_textarea($saleDescription);?> </div>
-<div id ="leftFormCol"><?php echo form_submit('submit','Add Sale');?> </div>
+<label><?php echo form_label('Name:','name'); ?> <span class="small">Required Field</span></label>
+<?php echo form_input($saleName); ?>
+<label><?php echo form_label('Location:','location');?> <span class="small">Required Field</span></label>
+<?php echo form_input($saleLocation);?>
+<label><?php echo form_label('Bedrooms: ','bedrooms');?> <span class="small">Required Field</span></label>
+<?php echo form_input($saleBedrooms);?>
+<label><?php echo form_label('Bathrooms: ','bathrooms');?> <span class="small">Required Field</span></label>
+<?php echo form_input($saleBathrooms);?>
+<label><?php echo form_label('Condition: ','condition');?> <span class="small">Required Field</span></label>
+<?php echo form_input($saleCondition);?>
+<label><?php echo form_label('Price: ','price');?> <span class="small">Required Field</span></label>
+<?php echo form_input($salePrice);?>
+<label><?php echo form_label('Image: ','userfile');?> <span class="small">Required Field</span></label>
+<?php echo form_upload($saleImage);?>
+<label><?php echo form_label('Description: ','description');?> <span class="small">Required Field</span></label>
+<?php echo form_textarea($saleDescription);?>
+<?php echo form_submit('submit','Add Sale');?>
 <?php echo form_fieldset_close(); ?>
 <?php echo form_close(); ?>
+</div>
