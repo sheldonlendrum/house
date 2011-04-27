@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Apr 14, 2011 at 12:45 PM
+-- Generation Time: Apr 27, 2011 at 02:50 PM
 -- Server version: 5.1.44
 -- PHP Version: 5.2.13
 
@@ -22,16 +22,19 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 CREATE TABLE `images` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `description` varchar(150) NOT NULL,
-  `fullpath` text NOT NULL,
-  `thumbpath` text NOT NULL,
+  `imagename` text NOT NULL,
+  `thumbname` text NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=29 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=39 ;
 
 --
 -- Dumping data for table `images`
 --
 
-INSERT INTO `images` VALUES(28, 'hii', 'Truck.jpg', 'Truck_thumb.jpg');
+INSERT INTO `images` VALUES(1, 'testing', 'test.jpg', 'test_thumb.jpg');
+INSERT INTO `images` VALUES(38, 'logo', 'logo_image.jpg', 'logo_image_thumb.jpg');
+INSERT INTO `images` VALUES(37, 'big truck', 'Truck.jpg', 'Truck_thumb.jpg');
+INSERT INTO `images` VALUES(36, 'this is a screen shot', 'Screen_shot_2011-04-27_at_10.03_.01_AM_.png', 'Screen_shot_2011-04-27_at_10.03_.01_AM__thumb.png');
 
 -- --------------------------------------------------------
 
@@ -53,12 +56,12 @@ CREATE TABLE `pages` (
 -- Dumping data for table `pages`
 --
 
-INSERT INTO `pages` VALUES(1, 'Home', 'home', 'This is the home page', 'home');
-INSERT INTO `pages` VALUES(2, 'About Us', 'about-us', 'About us\n', 'default');
-INSERT INTO `pages` VALUES(3, 'Gallery', 'gallery', 'Gallery', 'default');
+INSERT INTO `pages` VALUES(1, 'Home', 'home', '0', 'home');
+INSERT INTO `pages` VALUES(2, 'About Us', 'about-us', 'About us .', 'default');
+INSERT INTO `pages` VALUES(3, 'Gallery', 'gallery', 'Please click on an Image to view an larger Image.', 'gallery');
 INSERT INTO `pages` VALUES(4, 'Testimonials ', 'testimonials', 'Testimonials ', 'default');
 INSERT INTO `pages` VALUES(5, 'Sales', 'sales', 'Sales loaded from DB', 'sales');
-INSERT INTO `pages` VALUES(6, 'Contact', 'contact-us', 'Contact Us', 'default');
+INSERT INTO `pages` VALUES(6, 'Contact', 'contact-us', 'Contact Us', 'contact');
 
 -- --------------------------------------------------------
 
@@ -75,18 +78,22 @@ CREATE TABLE `sales` (
   `condition` text NOT NULL,
   `description` text NOT NULL,
   `price` float(100,2) NOT NULL,
-  `image` varchar(450) NOT NULL,
+  `imagename` varchar(450) NOT NULL,
+  `thumbname` varchar(450) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=25 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=42 ;
 
 --
 -- Dumping data for table `sales`
 --
 
-INSERT INTO `sales` VALUES(21, 'Jess McKenzie', 'blah', 3, 5, 'stuffed', 'truck goes vroom', 25.00, '/home/devnoo/public_html/House/includes/uploads/Truck.jpg');
-INSERT INTO `sales` VALUES(22, 'The Dream', 'Auckland', 5, 4, 'Used', 'testing place holder', 56.00, '/home/devnoo/public_html/House/includes/uploads/test.gif');
-INSERT INTO `sales` VALUES(23, 'Jess McKenzie', 'Auckland', 5, 1, 'stuffed', 'testing', 30.00, '/home/devnoo/public_html/House/includes/uploads/test.gif');
-INSERT INTO `sales` VALUES(24, 'Jess McKenzie', 'Auckland', 4, 5, 'OK', 'test', 31.00, '/home/devnoo/public_html/House/includes/uploads/test.gif');
+INSERT INTO `sales` VALUES(21, 'Jess McKenzie', 'blah', 3, 5, 'stuffed', 'truck goes vroom', 25.00, '/home/devnoo/public_html/House/includes/uploads/Truck.jpg', '');
+INSERT INTO `sales` VALUES(41, 'theclevedonhotel', 'Clevedon', 8, 8, 'Ok I guess', 'monkeys', 78.00, '', '_thumb');
+INSERT INTO `sales` VALUES(40, 'theclevedonhotel', 'Clevedon', 8, 8, 'Ok I guess', 'monkeys', 78.00, '', '_thumb');
+INSERT INTO `sales` VALUES(39, 'theclevedonhotel', 'Clevedon', 8, 8, 'Ok I guess', 'monkeys', 78.00, '', '_thumb');
+INSERT INTO `sales` VALUES(38, 'theclevedonhotel', 'Clevedon', 8, 8, 'Ok I guess', 'monkeys', 78.00, '', '_thumb');
+INSERT INTO `sales` VALUES(37, 'Jess McKenzie', 'Auckland', 5, 1, 'stuffed', 'test', 35.00, '', '_thumb');
+INSERT INTO `sales` VALUES(36, 'Jess McKenzie', 'Auckland', 5, 1, 'stuffed', 'test', 35.00, '', '_thumb');
 
 -- --------------------------------------------------------
 
