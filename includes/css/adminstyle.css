@@ -195,51 +195,16 @@ nav a:hover{
 #pageEdit textarea{
 	width:480px;
 }
-/*Admin Login */
-#loginForm{
-    margin: 0 auto 10px;
-    width:150px;
-    height:150px;
-    background-color:#c5c4c3;
-    -moz-border-radius:3px;
-    -webkit-border-radius:3px;
+
+#deleteImage{
+	float:left;
+	margin-left:25px;
+	width:100px;
+	height:100px;
 }
-#loginForm label{
-    font-weight:bold;
-    margin:5px 0 0 15px;
-    display:block;
-}
-#loginForm input{
-    margin:10px 0 0 15px;
-    height:15px;
-}
-#loginForm input[type=submit]{
-    margin-top:5px;
-    display:block;
-}
-#sales{
-    width:150px;
-    height:180px;
-    margin-left:15px;
-    border: 1px solid red;
-}
- 
-#sales .thumbnail{
-    height:150px;
-    width:150px;
-}
- 
-#sales .location{
-    float:left;
-    text-align:center;
-    font-weight:bold;
-    margin-left:8px;
-}
- 
-#sales .price{
-    float:left;
-    text-align:left;
-    font-weight:bold;
-    padding-left:5px;
-    color:#ff0101;
+
+#deleteImage .thumbnail{
+	margin:0 auto;
+	height:90px;
+	width:90px;
 }

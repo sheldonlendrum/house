@@ -2,7 +2,7 @@
 //Setting form attributes
 $formpageEdit = array('id' => 'pageEdit', 'name' => 'pageEdit');
 $formInputTitle = array('id' => 'title', 'name' => 'title');
-$formTextareaContent = array('id' => 'content', 'name' => 'content');
+$formTextareaContent = array('id' => 'textContent', 'name' => 'textContent');
 ?>
 
 
@@ -17,8 +17,8 @@ echo '<section id = "validation">Page Updated</section>';
 }
 ?>
 <label><?php echo form_label ('Content:', 'content');?><span class="small">Required Field</span></label>
-<?php echo display_ckeditor($ckeditor); ?>
-<?php echo form_textarea("content", $page[0]['content']); ?>
+<?php echo form_textarea($formTextareaContent, $page[0]['content']); ?>
+<script type="text/javascript">CKEDITOR.replace('textContent');</script>
 <?php echo form_submit('submit','Submit'); ?>
 <?php echo form_fieldset_close();
 	  echo form_close(); ?>

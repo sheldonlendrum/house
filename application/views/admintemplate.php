@@ -8,7 +8,7 @@ echo doctype('html5');
 <head>
     <title>Nationwide Housemovers : <?php echo $title ?></title>
   <?php echo link_tag($stylesheetCSS);?>
-   <script type="text/javascript" src="<?php echo base_url(); ?>includes/js/modernizr.js"></script>
+   <script type="text/javascript" src="<?php echo base_url(); ?>includes/js/ckedit/ckeditor.js"></script>
 </head>
 <body>
 	<div id ="wrapper">

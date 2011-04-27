@@ -26,8 +26,16 @@ class Deleteimage extends CI_Controller {
 
 }
 
-	function delete() {
+	function delete($id) {
 		
+		$id = $this->uri->segment(3);
+		$this->image_model->deleteImage($id);
+		$page['get_images'] = $this->image_model->getImages();
+	    $data['cms_pages'] = $this->navigation_model->getCMSPages();
+	    $data['title'] = 'Delete Gallery Image'; 
+	    $data['content'] = $this->load->view('admin/deleteimage',$page,TRUE);
+	
+	   
 	}
 
 }
