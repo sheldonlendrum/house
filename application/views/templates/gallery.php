@@ -1,3 +1,5 @@
-<h1><?= $title ?></h1>
+<h1><?php echo $name; ?></h1>
 
-<p><?php echo $content; ?></p>
+<?php echo $content; ?>
+
+<p>IMAGES:</p>

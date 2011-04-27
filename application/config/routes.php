@@ -39,5 +39,8 @@
 */
 
 $route['default_controller'] = "home";
-$route['page/:any'] = 'page';
+
+$route['process/contact-us'] = 'pages/contact';
+
+$route['(:any)'] = 'pages';
 //$route['admin/:any'] = 'admin';

@@ -1,5 +1,7 @@
 <h1><?= $title ?></h1>
-<?php if(is_array()); ?>
+
+
+<?php if(is_array($sales_pages)); ?>
 <?php foreach($sales_pages as $sale); ?>
 <div id = "sales">
 	<img class = "thumbnail" src = <?= $sale->thumbname ?> />
